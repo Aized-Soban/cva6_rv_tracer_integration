@@ -127,6 +127,7 @@ add_sv "$rv_tracer_dir/rtl/te_reg.sv"
 add_sv "$rv_tracer_dir/rtl/te_resync_counter.sv"
 add_sv "$rv_tracer_dir/rtl/rv_tracer.sv"
 
+
 # ------------------------------------------------------------
 # Add TB (simulation only)
 # ------------------------------------------------------------
@@ -136,6 +137,7 @@ if {[file exists "$top_dir/tb/tb_rv_tracer_only.sv"]} {
 } else {
   puts "WARNING: TB not found at $top_dir/tb/tb_rv_tracer_only.sv (skipping sim top)"
 }
+
 
 # ------------------------------------------------------------
 # Compile order

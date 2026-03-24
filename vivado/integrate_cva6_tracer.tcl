@@ -44,7 +44,16 @@ set_property simulator_language Mixed [current_project]
 set TARGET_CFG "cv64a6_imafdc_sv39"
 
 # repo root contains cva6/
-set CVA6_ROOT [file normalize "./cva6"]
+############
+# set CVA6_ROOT [file normalize "./cva6"]
+############
+# script_dir = .../vivado (or wherever this script lives)
+# repo root   = one level above it
+set repo_root [file normalize "$script_dir/.."]
+set CVA6_ROOT [file normalize "$repo_root/cva6"]
+
+############
+
 
 set ::CVA6_ROOT     $CVA6_ROOT
 set ::CVA6_REPO_DIR $CVA6_ROOT

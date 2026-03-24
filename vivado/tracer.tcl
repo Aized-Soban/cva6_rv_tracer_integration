@@ -56,7 +56,7 @@ proc add_sv_sim {p} {
 # ------------------------------------------------------------
 set deps_dir        "./deps"
 set third_party_dir "./ip/third_party"
-set top_dir         "./top_trace"
+set top_dir         "./top_trace_inst"
 
 set rv_tracer_dir   "$third_party_dir/rv_tracer"
 set rv_encap_dir    "$third_party_dir/rv_encapsulator"
@@ -76,7 +76,7 @@ must_exist $conn_dir
 
 must_exist "$top_dir/rtl"
 must_exist "$top_dir/tb"
-must_exist "$top_dir/rtl/tracer_top.sv"
+must_exist "$top_dir/rtl/tracer_top_inst.sv"
 
 # ------------------------------------------------------------
 # Create project
@@ -159,24 +159,24 @@ add_sv "$rv_encap_dir/src/rtl/rv_encapsulator.sv"
 # ------------------------------------------------------------
 # Add your integration top
 # ------------------------------------------------------------
-add_sv "$top_dir/rtl/tracer_top.sv"
-set_property top tracer_top [current_fileset]
+add_sv "$top_dir/rtl/tracer_top_inst.sv"
+set_property top tracer_top_inst [current_fileset]
 
 # ------------------------------------------------------------
 # Add testbench (simulation only)
 # ------------------------------------------------------------
-if {[file exists "$top_dir/tb/tb_tracer_top.sv"]} {
-  add_sv_sim "$top_dir/tb/tb_tracer_top.sv"
-  set_property top tb_tracer_top [get_filesets sim_1]
+if {[file exists "$top_dir/tb/tb_tracer_top_inst.sv"]} {
+  add_sv_sim "$top_dir/tb/tb_tracer_top_inst.sv"
+  set_property top tb_tracer_top_inst [get_filesets sim_1]
 } else {
-  puts "WARNING: TB not found at $top_dir/tb/tb_tracer_top.sv (skipping sim top)"
+  puts "WARNING: TB not found at $top_dir/tb/tb_tracer_top_inst.sv (skipping sim top)"
 }
 
 # ------------------------------------------------------------
 # Optional: add constraints if you want
 # ------------------------------------------------------------
-# if {[file exists "./vivado/xdc/tracer_top.xdc"]} {
-#   add_files -fileset constrs_1 -norecurse [file normalize "./vivado/xdc/tracer_top.xdc"]
+# if {[file exists "./vivado/xdc/Enc_trace.xdc"]} {
+#   add_files -fileset constrs_1 -norecurse [file normalize "./vivado/xdc/Enc_trace.xdc"]
 # }
 
 # ------------------------------------------------------------
