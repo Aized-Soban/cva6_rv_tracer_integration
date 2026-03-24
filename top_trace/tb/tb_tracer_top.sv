@@ -1,408 +1,324 @@
-`timescale 1ns/1ps
-
-// ============================================================
-// tb_tracer_top.sv
-// Full TB for tracer_top.sv with:
-//  - robust APB (won't miss 1-cycle PREADY pulse)
-//  - enables tracing via TRACE_STATE
-//  - generates retire + branch + exception events
-//  - ATB sink toggles atready to show movement/backpressure
-// ============================================================
-
 module tb_tracer_top;
 
-  // -----------------------------
-  // Parameters
-  // -----------------------------
-  localparam int unsigned NRET       = 1;
-  localparam int unsigned N          = 1;
-  localparam int unsigned FIFO_DEPTH = 8;
-
-  localparam int unsigned APB_AW     = 32;
-  localparam int unsigned DATA_LEN   = 32;
-  localparam int unsigned ENCAP_FIFO = 8;
-
-  // -----------------------------
-  // Imports (make sure these packages are in your compile list)
-  // -----------------------------
-  import te_pkg::*;
   import connector_pkg::*;
-  import encap_pkg::*;
 
-  // -----------------------------
-  // Clock / Reset
-  // -----------------------------
-  logic clk;
-  logic rst_n;
+  localparam int unsigned NRET           = 2;
+  localparam int unsigned N              = 1;
+  localparam int unsigned FIFO_DEPTH     = 16;
+  localparam int unsigned APB_ADDR_WIDTH = 32;
+  localparam int unsigned ONLY_BRANCHES  =  1;
 
-  initial clk = 0;
-  always #5 clk = ~clk; // 100 MHz
+  // Match tracer_top defaults/params as needed
+  localparam int unsigned DATA_LEN         = 32;
+  localparam int unsigned ENCAP_FIFO_DEPTH = 16;
 
-  // -----------------------------
-  // DUT I/O
-  // -----------------------------
-  logic [NRET-1:0]                          cpu_valid;
-  logic [NRET-1:0][connector_pkg::XLEN-1:0] cpu_pc;
-  connector_pkg::fu_op [NRET-1:0]           cpu_op;
-  logic [NRET-1:0]                          cpu_is_compressed;
+  logic clk_i, rst_ni;
+  initial clk_i = 1'b0;
+  always #5 clk_i = ~clk_i;
 
-  logic                                     cpu_branch_valid;
-  logic                                     cpu_is_taken;
-  connector_pkg::cf_t                       cpu_cf_type;
-  logic [connector_pkg::XLEN-1:0]           cpu_disc_pc;
+  task automatic step(int n=1);
+    repeat (n) @(posedge clk_i);
+  endtask
 
-  logic                                     cpu_ex_valid;
-  logic [connector_pkg::XLEN-1:0]           cpu_tval;
-  logic [connector_pkg::XLEN-1:0]           cpu_cause;
-  logic [connector_pkg::PRIV_LEN-1:0]       cpu_priv_lvl;
+  // Inputs
+  logic [NRET-1:0]                  cpu_valid_i;
+  logic [NRET-1:0][XLEN-1:0]        cpu_pc_i;
+  fu_op [NRET-1:0]                 cpu_op_i;
+  logic [NRET-1:0]                  cpu_is_compressed_i;
 
-  logic [te_pkg::TIME_LEN-1:0]              time_q;
-  logic [te_pkg::XLEN-1:0]                  tvec;
-  logic [te_pkg::XLEN-1:0]                  epc;
+  logic                             cpu_branch_valid_i;
+  logic                             cpu_is_taken_i;
+  cf_t                              cpu_cf_type_i;
+  logic [XLEN-1:0]                  cpu_disc_pc_i;
+
+  logic                             cpu_ex_valid_i;
+  logic [XLEN-1:0]                  cpu_tval_i;
+  logic [XLEN-1:0]                  cpu_cause_i;
+  logic [PRIV_LEN-1:0]              cpu_priv_lvl_i;
+
+  logic [te_pkg::TIME_LEN-1:0]      time_i;
+  logic [te_pkg::XLEN-1:0]          tvec_i, epc_i;
 
   // APB
-  logic [APB_AW-1:0]                        paddr;
-  logic                                     pwrite;
-  logic                                     psel;
-  logic                                     penable;
-  logic [31:0]                              pwdata;
-  logic                                     pready;
-  logic [31:0]                              prdata;
+  logic [APB_ADDR_WIDTH-1:0]        paddr_i;
+  logic                             pwrite_i, psel_i, penable_i;
+  logic [31:0]                      pwdata_i;
+  logic                             pready_o;
+  logic [31:0]                      prdata_o;
 
   // ATB
-  logic                                     atready;
-  logic                                     afvalid;
+  logic                             atready_i;
+  logic                             afvalid_i;
+  logic [$clog2(DATA_LEN)-4:0]      atbytes_o;
+  logic [DATA_LEN-1:0]              atdata_o;
+  logic [6:0]                       atid_o;
+  logic                             atvalid_o;
+  logic                             afready_o;
 
-  logic [$clog2(DATA_LEN)-4:0]              atbytes;
-  logic [DATA_LEN-1:0]                      atdata;
-  logic [6:0]                               atid;
-  logic                                     atvalid;
-  logic                                     afready;
+  logic                             stall_o;
 
-  logic                                     stall;
-
-  // -----------------------------
-  // DUT instance
-  // -----------------------------
   tracer_top #(
-    .NRET              ( NRET ),
-    .N                 ( N ),
-    .FIFO_DEPTH        ( FIFO_DEPTH ),
-
-    .ONLY_BRANCHES     ( 0 ),
-    .APB_ADDR_WIDTH    ( APB_AW ),
-
-    .DATA_LEN          ( DATA_LEN ),
-    .ENCAP_FIFO_DEPTH  ( ENCAP_FIFO )
+    .NRET            (NRET),
+    .N               (N),
+    .FIFO_DEPTH       (FIFO_DEPTH),
+    .ONLY_BRANCHES    (ONLY_BRANCHES),
+    .APB_ADDR_WIDTH   (APB_ADDR_WIDTH),
+    .DATA_LEN         (DATA_LEN),
+    .ENCAP_FIFO_DEPTH (ENCAP_FIFO_DEPTH)
   ) dut (
-    .clk_i              ( clk ),
-    .rst_ni             ( rst_n ),
+    .clk_i               (clk_i),
+    .rst_ni              (rst_ni),
 
-    .cpu_valid_i        ( cpu_valid ),
-    .cpu_pc_i           ( cpu_pc ),
-    .cpu_op_i           ( cpu_op ),
-    .cpu_is_compressed_i( cpu_is_compressed ),
+    .cpu_valid_i         (cpu_valid_i),
+    .cpu_pc_i            (cpu_pc_i),
+    .cpu_op_i            (cpu_op_i),
+    .cpu_is_compressed_i (cpu_is_compressed_i),
 
-    .cpu_branch_valid_i ( cpu_branch_valid ),
-    .cpu_is_taken_i     ( cpu_is_taken ),
-    .cpu_cf_type_i      ( cpu_cf_type ),
-    .cpu_disc_pc_i      ( cpu_disc_pc ),
+    .cpu_branch_valid_i  (cpu_branch_valid_i),
+    .cpu_is_taken_i      (cpu_is_taken_i),
+    .cpu_cf_type_i       (cpu_cf_type_i),
+    .cpu_disc_pc_i       (cpu_disc_pc_i),
 
-    .cpu_ex_valid_i     ( cpu_ex_valid ),
-    .cpu_tval_i         ( cpu_tval ),
-    .cpu_cause_i        ( cpu_cause ),
-    .cpu_priv_lvl_i     ( cpu_priv_lvl ),
+    .cpu_ex_valid_i      (cpu_ex_valid_i),
+    .cpu_tval_i          (cpu_tval_i),
+    .cpu_cause_i         (cpu_cause_i),
+    .cpu_priv_lvl_i      (cpu_priv_lvl_i),
 
-    .time_i             ( time_q ),
-    .tvec_i             ( tvec ),
-    .epc_i              ( epc ),
+    .time_i              (time_i),
+    .tvec_i              (tvec_i),
+    .epc_i               (epc_i),
 
-    .paddr_i            ( paddr ),
-    .pwrite_i           ( pwrite ),
-    .psel_i             ( psel ),
-    .penable_i          ( penable ),
-    .pwdata_i           ( pwdata ),
-    .pready_o           ( pready ),
-    .prdata_o           ( prdata ),
+    .paddr_i             (paddr_i),
+    .pwrite_i            (pwrite_i),
+    .psel_i              (psel_i),
+    .penable_i           (penable_i),
+    .pwdata_i            (pwdata_i),
+    .pready_o            (pready_o),
+    .prdata_o            (prdata_o),
 
-    .atready_i          ( atready ),
-    .afvalid_i          ( afvalid ),
+    .atready_i           (atready_i),
+    .afvalid_i           (afvalid_i),
+    .atbytes_o           (atbytes_o),
+    .atdata_o            (atdata_o),
+    .atid_o              (atid_o),
+    .atvalid_o           (atvalid_o),
+    .afready_o           (afready_o),
 
-    .atbytes_o          ( atbytes ),
-    .atdata_o           ( atdata ),
-    .atid_o             ( atid ),
-    .atvalid_o          ( atvalid ),
-    .afready_o          ( afready ),
-
-    .stall_o            ( stall )
+    .stall_o             (stall_o)
   );
 
-  // -----------------------------
-  // Timestamp generator
-  // -----------------------------
-  always_ff @(posedge clk or negedge rst_n) begin
-    if (!rst_n) time_q <= '0;
-    else        time_q <= time_q + 1;
+  task automatic drive_defaults();
+    cpu_valid_i          = '0;
+    cpu_pc_i             = '0;
+    cpu_op_i[0]          = ADD;
+    cpu_op_i[1]          = ADD;
+    cpu_is_compressed_i  = '0;
+
+    cpu_branch_valid_i   = 1'b0;
+    cpu_is_taken_i       = 1'b0;
+    cpu_cf_type_i        = NoCF;
+    cpu_disc_pc_i        = '0;
+
+    cpu_ex_valid_i       = 1'b0;
+    cpu_tval_i           = '0;
+    cpu_cause_i          = '0;
+    cpu_priv_lvl_i       = '0;
+
+    paddr_i              = '0;
+    pwrite_i             = 1'b0;
+    psel_i               = 1'b0;
+    penable_i            = 1'b0;
+    pwdata_i             = '0;
+
+    tvec_i               = '0;
+    epc_i                = '0;
+
+    atready_i            = 1'b1; // IMPORTANT: keep ATB always ready
+    afvalid_i            = 1'b0;
+  endtask
+
+  // make time progress
+  always_ff @(posedge clk_i) begin
+    if (!rst_ni) time_i <= '0;
+    else        time_i <= time_i + 1;
   end
 
-  // -----------------------------
-  // Robust APB tasks (handles 1-cycle PREADY pulse)
-  // -----------------------------
-  task automatic apb_write(input logic [APB_AW-1:0] addr,
-                           input logic [31:0]       data,
-                           input int unsigned       timeout_cycles = 10);
-    int unsigned k;
-    begin
-      // SETUP phase: drive stable before posedge
-      @(negedge clk);
-      paddr   <= addr;
-      pwdata  <= data;
-      pwrite  <= 1'b1;
-      psel    <= 1'b1;
-      penable <= 1'b0;
+  // FIXED APB write: clocked wait + timeout (NO ZERO-TIME while loop!)
+  task automatic apb_write32(
+    input logic [APB_ADDR_WIDTH-1:0] addr,
+    input logic [31:0]               data,
+    input int unsigned               timeout_cycles = 200
+  );
+    int unsigned c;
 
-      @(posedge clk); // captures setup
+    @(negedge clk_i);
+    paddr_i   <= addr;
+    pwdata_i  <= data;
+    pwrite_i  <= 1'b1;
+    psel_i    <= 1'b1;
+    penable_i <= 1'b0;
 
-      // ACCESS phase
-      @(negedge clk);
-      penable <= 1'b1;
+    @(negedge clk_i);
+    penable_i <= 1'b1;
 
-      @(posedge clk);
-      #1; // sample inside access cycle
-      if (!pready) begin
-        for (k = 0; k < timeout_cycles && !pready; k++) begin
-          @(posedge clk);
-          #1;
-        end
-        if (!pready)
-          $fatal(1, "[%0t] APB WRITE TIMEOUT addr=0x%08h data=0x%08h", $time, addr, data);
+    c = 0;
+    while (!pready_o) begin
+      @(negedge clk_i);
+      c++;
+      if (c >= timeout_cycles) begin
+        $fatal(1, "[TB] APB TIMEOUT waiting for pready_o (addr=0x%0h data=0x%0h t=%0t)",
+               addr, data, $time);
       end
-
-      // COMPLETE
-      @(negedge clk);
-      psel    <= 1'b0;
-      penable <= 1'b0;
-      pwrite  <= 1'b0;
-      paddr   <= '0;
-      pwdata  <= '0;
     end
+
+    @(negedge clk_i);
+    psel_i    <= 1'b0;
+    penable_i <= 1'b0;
+    pwrite_i  <= 1'b0;
+    paddr_i   <= '0;
+    pwdata_i  <= '0;
   endtask
 
-  task automatic apb_read(input  logic [APB_AW-1:0] addr,
-                          output logic [31:0]       data,
-                          input  int unsigned       timeout_cycles = 10);
-    int unsigned k;
-    begin
-      // SETUP
-      @(negedge clk);
-      paddr   <= addr;
-      pwrite  <= 1'b0;
-      psel    <= 1'b1;
-      penable <= 1'b0;
+  // SAME stimulus style as your tb: pending branch + retire EQ
+task automatic do_one_branch_safe(input logic [XLEN-1:0] pc, input logic taken);
 
-      @(posedge clk);
+  // wait until DUT is not stalling (prevents internal FIFO/arb edge cases)
+  while (stall_o) @(posedge clk_i);
 
-      // ACCESS
-      @(negedge clk);
-      penable <= 1'b1;
+  // ---- pending branch record ----
+  @(negedge clk_i);
+  cpu_branch_valid_i <= 1'b1;
+  //cpu_is_taken_i     <= taken;
+  cpu_cf_type_i      <= Branch;
+  cpu_disc_pc_i      <= pc;
+/*
+  @(posedge clk_i);
+  @(negedge clk_i);
+  cpu_branch_valid_i <= 1'b0;
+  cpu_is_taken_i     <= 1'b0;
+  cpu_cf_type_i      <= NoCF;
+  cpu_disc_pc_i      <= '0;  */
 
-      @(posedge clk);
-      #1;
-      if (!pready) begin
-        for (k = 0; k < timeout_cycles && !pready; k++) begin
-          @(posedge clk);
-          #1;
-        end
-        if (!pready)
-          $fatal(1, "[%0t] APB READ TIMEOUT addr=0x%08h", $time, addr);
+  // *** IMPORTANT spacing (avoid same-cycle internal feedback) ***
+  @(posedge clk_i);
+
+  // wait again if DUT asserts stall after branch bookkeeping
+  while (stall_o) @(posedge clk_i);
+
+  // ---- retire branch instruction (EQ) ----
+  @(negedge clk_i);
+  cpu_valid_i[0] <= 1'b1;
+  cpu_pc_i[0]    <= pc;
+  cpu_op_i[0]    <= EQ;
+
+  @(posedge clk_i);
+  @(negedge clk_i);
+  cpu_valid_i[0] <= 1'b0;
+  cpu_pc_i[0]    <= '0;
+  cpu_op_i[0]    <= ADD;
+
+  // *** another spacing ***
+  @(posedge clk_i);
+
+endtask
+
+
+  // Debug monitors
+  int unsigned pkt_cnt, atb_cnt;
+
+  // INTERNAL packet emission from tracer_top (hierarchical signals)
+  always_ff @(posedge clk_i) begin
+    if (rst_ni) begin
+      if (dut.pkt_valid[0]) begin
+        pkt_cnt++;
+        $display("[PKT] t=%0t cnt=%0d type=0x%0h len=%0d payload[127:0]=0x%0h",
+                 $time, pkt_cnt, dut.pkt_type[0], dut.pkt_length[0], dut.pkt_payload[0][127:0]);
       end
-
-      data = prdata;
-
-      // COMPLETE
-      @(negedge clk);
-      psel    <= 1'b0;
-      penable <= 1'b0;
-      paddr   <= '0;
-    end
-  endtask
-
-  // -----------------------------
-  // ATB sink behavior (toggle ready to show movement)
-  // -----------------------------
-  // This creates backpressure bursts so you can see:
-  // atvalid may stay high and data beats drain when ready returns.
-  always_ff @(posedge clk or negedge rst_n) begin
-    if (!rst_n) begin
-      atready <= 1'b0;
-      afvalid <= 1'b1;
-    end else begin
-      // 3 cycles ready, 2 cycles not-ready pattern
-      if (($time/10) % 5 < 3) atready <= 1'b1;
-      else                    atready <= 1'b0;
-
-      // keep AFVALID asserted (or toggle if you want funnel effects)
-      afvalid <= 1'b1;
+      if (stall_o) $display("[STALL] t=%0t stall_o=1", $time);
     end
   end
 
-  // ATB logger
-  int unsigned beat_count;
-  always_ff @(posedge clk or negedge rst_n) begin
-    if (!rst_n) begin
-      beat_count <= 0;
-    end else if (atvalid && atready) begin
-      beat_count <= beat_count + 1;
-      $display("[%0t] ATB beat=%0d id=0x%0h bytes=%0d data=0x%08h stall=%0b",
-               $time, beat_count, atid, atbytes, atdata, stall);
+  // ATB beats 
+  /*
+  always_ff @(posedge clk_i) begin
+    if (rst_ni) begin
+      if (atvalid_o && atready_i) begin
+        atb_cnt++;
+        $display("[ATB] t=%0t beat=%0d bytes=%0d id=0x%0h data=0x%0h",
+                 $time, atb_cnt, atbytes_o, atid_o, atdata_o);
+      end
     end
-  end
-
-  // -----------------------------
-  // Event generators
-  // -----------------------------
-  task automatic retire_insn(input logic [connector_pkg::XLEN-1:0] pc_val,
-                             input logic                            is_comp = 1'b0);
-    begin
-      cpu_valid[0]         <= 1'b1;
-      cpu_pc[0]            <= pc_val;
-      cpu_op[0]            <= connector_pkg::fu_op'('0);
-      cpu_is_compressed[0] <= is_comp;
-
-      // default: no branch / no exception
-      cpu_branch_valid     <= 1'b0;
-      cpu_is_taken         <= 1'b0;
-      cpu_cf_type          <= connector_pkg::cf_t'('0);
-      cpu_disc_pc          <= '0;
-
-      cpu_ex_valid         <= 1'b0;
-      cpu_tval             <= '0;
-      cpu_cause            <= '0;
-      cpu_priv_lvl         <= '0;
-
-      @(posedge clk);
-      cpu_valid[0] <= 1'b0;
-    end
-  endtask
-
-  task automatic branch_event(input logic [connector_pkg::XLEN-1:0] disc_pc,
-                              input logic taken);
-    begin
-      // make a cycle with branch_valid asserted
-      cpu_valid[0]         <= 1'b1;
-      cpu_pc[0]            <= disc_pc;
-      cpu_op[0]            <= connector_pkg::fu_op'('0);
-      cpu_is_compressed[0] <= 1'b0;
-
-      cpu_branch_valid     <= 1'b1;
-      cpu_is_taken         <= taken;
-      cpu_cf_type          <= connector_pkg::cf_t'('0);
-      cpu_disc_pc          <= disc_pc;
-
-      cpu_ex_valid         <= 1'b0;
-
-      @(posedge clk);
-      cpu_valid[0]       <= 1'b0;
-      cpu_branch_valid   <= 1'b0;
-    end
-  endtask
-
-  task automatic exception_event(input logic [connector_pkg::XLEN-1:0] pc_val,
-                                 input logic [connector_pkg::XLEN-1:0] cause_val,
-                                 input logic [connector_pkg::XLEN-1:0] tval_val);
-    begin
-      cpu_valid[0]         <= 1'b1;
-      cpu_pc[0]            <= pc_val;
-      cpu_op[0]            <= connector_pkg::fu_op'('0);
-      cpu_is_compressed[0] <= 1'b0;
-
-      cpu_ex_valid         <= 1'b1;
-      cpu_cause            <= cause_val;
-      cpu_tval             <= tval_val;
-
-      @(posedge clk);
-      cpu_valid[0] <= 1'b0;
-      cpu_ex_valid <= 1'b0;
-    end
-  endtask
-
-  // -----------------------------
-  // Main test sequence
-  // -----------------------------
-  logic [31:0] rdata;
-  logic [31:0] TRACE_STATE_ADDR;
-
+  end */
+/*
+  // Global watchdog
   initial begin
-    // Defaults
-    cpu_valid          = '0;
-    cpu_pc             = '0;
-    cpu_op             = '{default: connector_pkg::fu_op'('0)};
-    cpu_is_compressed  = '0;
+    int unsigned cyc = 0;
+    wait (rst_ni === 1'b1);
+    forever begin
+      @(posedge clk_i);
+      cyc++;
+      if (cyc > 50000) $fatal(1, "[TB] GLOBAL TIMEOUT t=%0t pkt_cnt=%0d atb_cnt=%0d", $time, pkt_cnt, atb_cnt);
+    end
+  end  
+always @(posedge clk_i) begin
+  //$display("HEARTBEAT t=%0t", $time);
+end
+initial begin
+  int unsigned dc = 0;
+  wait(rst_ni);
+  forever begin
+    #0; // advance delta-cycle (NOT time)
+    dc++;
+    if (dc == 1000000) begin
+      $fatal(1, "[TB] DELTA-CYCLE HANG detected at t=%0t", $time);
+    end
+  end
+end   */
+  // MAIN
+  logic [XLEN-1:0] pc_base;
+  initial begin
+    rst_ni = 1'b0;
+drive_defaults();
 
-    cpu_branch_valid   = 1'b0;
-    cpu_is_taken       = 1'b0;
-    cpu_cf_type        = connector_pkg::cf_t'('0);
-    cpu_disc_pc        = '0;
+// hold reset for a few cycles
+ repeat (1) @(posedge clk_i);
 
-    cpu_ex_valid       = 1'b0;
-    cpu_tval           = '0;
-    cpu_cause          = '0;
-    cpu_priv_lvl       = '0;
+// RELEASE RESET OFF EDGE
+//@(negedge clk_i);
+//#1ps;
+rst_ni = 1'b1;
 
-    tvec               = 32'h0000_0100;
-    epc                = 32'h0000_0200;
+$display("[TB] Reset released at t=%0t", $time);
 
-    paddr              = '0;
-    pwrite             = 1'b0;
-    psel               = 1'b0;
-    penable            = 1'b0;
-    pwdata             = '0;
+    step(10);
 
-    beat_count         = 0;
+    //$display("[TB] APB enable trace TRACE_STATE=1");
+    //apb_write32(APB_ADDR_WIDTH'(te_pkg::TRACE_STATE), 32'h1);
+    //step(10);
 
-    rst_n              = 1'b0;
+    pc_base = 64'h0000_0000_0000_8000;
 
-    // Waves
-    $dumpfile("tb_tracer_top.vcd");
-    $dumpvars(0, tb_tracer_top);
+    $display("[TB] Doing 200 branch events (pending + EQ retire)...");
+    for (int i=0; i<200; i++) begin
+      //do_one_branch_safe(pc_base + (i*4), (i & 1));
+      //do_one_branch_safe(pc_base + (i*4),0);
+      do_one_branch_safe(pc_base + (i*4),1);
+      
+    end
 
-    // Reset
-    repeat (10) @(posedge clk);
-    rst_n = 1'b1;
-    repeat (5) @(posedge clk);
+    $display("[TB] Drain 300 cycles...");
+    step(3000);
 
-    // ----------------------------------------------------------
-    // Enable tracing via APB:
-    // te_reg decode is paddr[7:0], TRACE_STATE constant is 8'h1F
-    // ----------------------------------------------------------
-    TRACE_STATE_ADDR = 32'(te_pkg::TRACE_STATE); // 0x1F
-    $display("[%0t] Enabling trace: write TRACE_STATE @0x%08h = 1", $time, TRACE_STATE_ADDR);
-
-    apb_write(TRACE_STATE_ADDR, 32'h0000_0001);
-    apb_read (TRACE_STATE_ADDR, rdata);
-    $display("[%0t] TRACE_STATE readback @0x%08h = 0x%08h", $time, TRACE_STATE_ADDR, rdata);
-
-    repeat (5) @(posedge clk);
-
-    // ----------------------------------------------------------
-    // Generate some activity
-    // ----------------------------------------------------------
-    retire_insn(32'h8000_0000);
-    retire_insn(32'h8000_0004);
-    retire_insn(32'h8000_0008, 1'b1); // compressed sample
-    retire_insn(32'h8000_000A, 1'b1); // compressed sample
-
-    branch_event(32'h8000_0010, 1'b1);
-
-    retire_insn(32'h8000_0014);
-    exception_event(32'h8000_0018, 32'h0000_0002, 32'hDEAD_BEEF);
-    retire_insn(32'h8000_001C);
-
-    // Let encapsulator drain (and atready toggling show movement)
-    repeat (300) @(posedge clk);
-
-    $display("[%0t] DONE. Total ATB beats observed: %0d", $time, beat_count);
+    $display("[TB] SUMMARY pkt_cnt=%0d atb_cnt=%0d at t=%0t", pkt_cnt, atb_cnt, $time);
     $finish;
   end
+
+  //initial begin
+  //$monitor("T=%0t | DUT STATE = %p", $time, dut);
+  //end
+
+    initial begin
+      $display("rv_tracer: %m");
+    end
 
 endmodule

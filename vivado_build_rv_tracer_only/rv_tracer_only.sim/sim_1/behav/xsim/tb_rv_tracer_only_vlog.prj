@@ -1,0 +1,24 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  -i "../../../../../ip/third_party/rv_tracer/include" \
+"../../../../../deps/common_cells/src/cf_math_pkg.sv" \
+"../../../../../deps/common_cells/src/edge_detect.sv" \
+"../../../../../ip/third_party/rv_tracer/rtl/lzc.sv" \
+"../../../../../deps/tech_cells_generic/src/deprecated/pulp_clk_cells.sv" \
+"../../../../../ip/third_party/rv_tracer/include/te_pkg.sv" \
+"../../../../../ip/third_party/rv_tracer/rtl/rv_tracer.sv" \
+"../../../../../deps/common_cells/src/sync.sv" \
+"../../../../../deps/common_cells/src/sync_wedge.sv" \
+"../../../../../deps/tech_cells_generic/src/rtl/tc_clk.sv" \
+"../../../../../ip/third_party/rv_tracer/rtl/te_branch_map.sv" \
+"../../../../../ip/third_party/rv_tracer/rtl/te_filter.sv" \
+"../../../../../ip/third_party/rv_tracer/rtl/te_packet_emitter.sv" \
+"../../../../../ip/third_party/rv_tracer/rtl/te_priority.sv" \
+"../../../../../ip/third_party/rv_tracer/rtl/te_reg.sv" \
+"../../../../../ip/third_party/rv_tracer/rtl/te_resync_counter.sv" \
+"../../../../../top_trace/tb/tb_rv_tracer_only.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,1681 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+=================================================
+RV_TRACER FULL CONSOLE MONITOR ACTIVE: tb_rv_tracer_only.dut
+NOTE: Arrays are printed element-wise at each posedge clk_i
+=================================================
+branch_map : map:0000000000000000000000000000000 , branch_cnt_q:00000
+from counter :resync_counter , counter_q : 0 ,et_resync_max_o:0,gt_resync_max_o:0 
+T=0 | tb_rv_tracer_only.dut | rst_ni=0 valid_i=0 stall_o=0 trace_enable=1 trace_activated=1 enc_mode=0 notime=0 nocontext=1 pready_o=0 prdata_o=00000000
+---- T=5000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=0 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=0 enc_activated_d=1 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=1 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b1}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=5000 ----
+
+---- T=15000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=0 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=0 enc_activated_d=1 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=1 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b1}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=15000 ----
+
+---- T=25000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=0 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=0 enc_activated_d=1 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=1 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b1}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=25000 ----
+
+---- T=35000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=0 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=0 enc_activated_d=1 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=1 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b1}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=35000 ----
+
+---- T=45000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=0 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=0 enc_activated_d=1 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=1 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b1}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=45000 ----
+
+---- T=55000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=0 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=0 enc_activated_d=1 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=1 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b1}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=55000 ----
+
+---- T=65000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=0 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=0 enc_activated_d=1 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=1 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b1}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=65000 ----
+
+---- T=75000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=0 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=0 enc_activated_d=1 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=1 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b1}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=75000 ----
+
+---- T=85000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=0 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=0 enc_activated_d=1 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=1 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b1}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=85000 ----
+
+---- T=95000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=0 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=0 enc_activated_d=1 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=1 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b1}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=95000 ----
+
+---- T=105000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=0 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=0 enc_activated_d=1 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=1 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b1}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=105000 ----
+
+---- T=115000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=0 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=0 enc_activated_d=1 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=1 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b1}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=115000 ----
+
+---- T=125000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=0 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=0 enc_activated_d=1 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=1 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b1}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=125000 ----
+
+---- T=135000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=0 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=0 enc_activated_d=1 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=1 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b1}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=135000 ----
+
+---- T=145000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=0 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=0 enc_activated_d=1 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=1 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b1}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=145000 ----
+
+---- T=155000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=0 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=0 enc_activated_d=1 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=1 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b1}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=155000 ----
+
+---- T=165000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=0 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=0 enc_activated_d=1 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=1 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b1}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=165000 ----
+
+---- T=175000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=0 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=0 enc_activated_d=1 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=1 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b1}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=175000 ----
+
+---- T=185000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=0 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=0 enc_activated_d=1 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=1 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b1}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=185000 ----
+
+[TB] Reset released at t=195000
+---- T=195000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=1 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=0 enc_activated_d=1 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=1 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b1}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=195000 ----
+
+T=195000 | tb_rv_tracer_only.dut | rst_ni=1 valid_i=0 stall_o=0 trace_enable=1 trace_activated=1 enc_mode=0 notime=0 nocontext=1 pready_o=0 prdata_o=00000000
+[PKT] t=205000 type=15 len=2 payload=0x201f
+---- T=205000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=1 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=1 packet_type_o=15 packet_length_o=2 packet_payload_o=0000000000000000000000000000000000000000000000000000000000201f
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=1 enc_activated_d=0 enc_activated_q=1 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=0 enc_config_change_q=1
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0}
+PRI[0]: packet_format=3 f_sync_sf=3 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=1 packet_emitted=1 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=205000 ----
+
+---- T=215000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=1 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=1 enc_activated_d=0 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=0 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=215000 ----
+
+---- T=225000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=1 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=1 enc_activated_d=0 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=0 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=225000 ----
+
+---- T=235000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=1 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=1 enc_activated_d=0 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=0 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=235000 ----
+
+---- T=245000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=1 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=1 enc_activated_d=0 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=0 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=245000 ----
+
+---- T=255000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=1 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=1 enc_activated_d=0 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=0 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=255000 ----
+
+---- T=265000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=1 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=1 enc_activated_d=0 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=0 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=265000 ----
+
+---- T=275000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=1 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=1 enc_activated_d=0 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=0 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=275000 ----
+
+---- T=285000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=1 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=1 enc_activated_d=0 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=0 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=285000 ----
+
+---- T=295000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=1 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=1 enc_activated_d=0 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=0 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=295000 ----
+
+---- T=305000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=1 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=1 enc_activated_d=0 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=0 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=305000 ----
+
+---- T=315000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=1 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=1 penable_i=0 pwrite_i=0 paddr_i=0000001c pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=1 enc_activated_d=0 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=0 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=315000 ----
+
+T=315000 | tb_rv_tracer_only.dut | rst_ni=1 valid_i=0 stall_o=0 trace_enable=1 trace_activated=1 enc_mode=0 notime=0 nocontext=1 pready_o=1 prdata_o=00000001
+---- T=325000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=1 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=1 penable_i=1 pwrite_i=0 paddr_i=0000001c pwdata_i=00000000 | pready_o=1 prdata_o=00000001
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=1 enc_activated_d=0 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=0 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=325000 ----
+
+T=325000 | tb_rv_tracer_only.dut | rst_ni=1 valid_i=0 stall_o=0 trace_enable=1 trace_activated=1 enc_mode=0 notime=0 nocontext=1 pready_o=0 prdata_o=00000000
+[TB] TRACE_STATE readback = 0x00000001
+---- T=335000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=1 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=1 penable_i=1 pwrite_i=0 paddr_i=0000001c pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=1 enc_activated_d=0 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=0 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=335000 ----
+
+---- T=345000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=1 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=1 enc_activated_d=0 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=0 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=345000 ----
+
+---- T=355000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=1 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=1 penable_i=0 pwrite_i=1 paddr_i=0000001c pwdata_i=00000001 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=1 enc_activated_d=0 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=0 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=355000 ----
+
+T=355000 | tb_rv_tracer_only.dut | rst_ni=1 valid_i=0 stall_o=0 trace_enable=1 trace_activated=1 enc_mode=0 notime=0 nocontext=1 pready_o=1 prdata_o=00000000
+---- T=365000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=1 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=1 penable_i=1 pwrite_i=1 paddr_i=0000001c pwdata_i=00000001 | pready_o=1 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=1 enc_activated_d=0 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=0 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=365000 ----
+
+T=365000 | tb_rv_tracer_only.dut | rst_ni=1 valid_i=0 stall_o=0 trace_enable=1 trace_activated=1 enc_mode=0 notime=0 nocontext=1 pready_o=0 prdata_o=00000000
+[TB] Running MIXED default pattern for 400 events (includes itype 4 & 5)
+---- T=375000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=1 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000000 encapsulator_ready_i=1
+APB: psel_i=1 penable_i=1 pwrite_i=1 paddr_i=0000001c pwdata_i=00000001 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=1 enc_activated_d=0 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=0 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=xxxxxxxx lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=375000 ----
+
+T=375000 | tb_rv_tracer_only.dut | rst_ni=1 valid_i=1 stall_o=0 trace_enable=1 trace_activated=1 enc_mode=0 notime=0 nocontext=1 pready_o=0 prdata_o=00000000
+[IN ] t=385000 valid=1 itype=0 pc=0x1200 iretire=2 ilastsize=1 time=1
+---- T=385000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=1 valid_i=1 itype_i=0 ilastsize_i=1 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00001200 iretire_i=00000002 time_i=0000000000000001 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=1 enc_activated_d=0 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=0 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000000 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00000000 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=0
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000000 | tc_priv=0 nc_priv=0
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=00001200 lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=1 valid0_q=0
+TAB: iretired_tab[0][0]=00000000
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00000000
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=0
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000000 priv_tab[0]=0
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=385000 ----
+
+T=385000 | tb_rv_tracer_only.dut | rst_ni=1 valid_i=0 stall_o=0 trace_enable=1 trace_activated=1 enc_mode=0 notime=0 nocontext=1 pready_o=0 prdata_o=00000000
+[IN ] t=395000 valid=0 itype=0 pc=0x0 iretire=0 ilastsize=0 time=1
+---- T=395000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=1 valid_i=0 itype_i=0 ilastsize_i=0 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00000000 iretire_i=00000000 time_i=0000000000000001 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=1 enc_activated_d=0 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=0 enc_config_change_q=0
+MISC: privchange_d=0 privchange_q=0 turn_on_tracer_d=0 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000002 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00001200 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=1
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000001 | tc_priv=0 nc_priv=3
+QUAL: tc_first_qualified=0 tc_final_qualified=0
+UP/QUAL/ADDR[0]: updiscon=0 qualified=1 address=00001200 lc_updiscon=0 lc_qualified=0
+VALID0[0]: valid0_d=0 valid0_q=1
+TAB: iretired_tab[0][0]=00000002
+TAB: iretired_tab[1][0]=00000000
+TAB: itype_tab[0][0]=0
+TAB: itype_tab[1][0]=0
+TAB: address_tab[0][0]=00001200
+TAB: address_tab[1][0]=00000000
+TAB: updiscon_tab[0][0]=0
+TAB: updiscon_tab[1][0]=0
+TAB: updiscon_tab[2][0]=0
+TAB: qualified_tab[0][0]=1
+TAB: qualified_tab[1][0]=0
+TAB: qualified_tab[2][0]=0
+TAB: exception_tab[0]=0 interrupt_tab[0]=0
+TAB: exception_tab[1]=0 interrupt_tab[1]=0
+TAB: exception_tab[2]=0 interrupt_tab[2]=0
+TAB: cause_tab[0]=00000000 tval_tab[0]=00000000 epc_tab[0]=00000000
+TAB: cause_tab[1]=00000000 tval_tab[1]=00000000 epc_tab[1]=00000000
+TAB: cause_tab[2]=00000000 tval_tab[2]=00000000 epc_tab[2]=00000000
+TAB: tvec_tab[0]=00000000 time_tab[0]=0000000000000001 priv_tab[0]=3
+TAB: tvec_tab[1]=00000000 time_tab[1]=0000000000000000 priv_tab[1]=0
+---- END T=395000 ----
+
+T=395000 | tb_rv_tracer_only.dut | rst_ni=1 valid_i=1 stall_o=0 trace_enable=1 trace_activated=1 enc_mode=0 notime=0 nocontext=1 pready_o=0 prdata_o=00000000
+[IN ] t=405000 valid=1 itype=0 pc=0x1204 iretire=2 ilastsize=1 time=2
+---- T=405000 | tb_rv_tracer_only.dut.RV_TRACER_PRINT_ALL ----
+PORTS: rst_ni=1 valid_i=1 itype_i=0 ilastsize_i=1 cause_i=00000000 epc_i=00000000 tval_i=00000000 tvec_i=00000000 priv_i=3 iaddr_i=00001204 iretire_i=00000002 time_i=0000000000000002 encapsulator_ready_i=1
+APB: psel_i=0 penable_i=0 pwrite_i=0 paddr_i=00000000 pwdata_i=00000000 | pready_o=0 prdata_o=00000000
+OUT[0]: packet_valid_o=0 packet_type_o=0 packet_length_o=0 packet_payload_o=00000000000000000000000000000000000000000000000000000000000000
+MGMT: trace_activated=1 trace_enable=1 nocontext=1 notime=0 encoder_mode=0 trace_req_deactivate=x clk_gated=0 resync_rst=0
+FLAGS: nc_branch_map_flush=0 nc_branch_map_empty=1 tc_branch_map_empty=1 lossless_trace=0 shallow_trace=0
+BRANCH: branch_map=00000000 branch_count=00 branch_d=0 branch_q=0 branch_valid=0 branch_taken_d=0 branch_taken_q=0 branch_map_full_d=0 branch_map_full_q=0
+RESYNC: gt_max_resync_d=0 gt_max_resync_q=0 et_max_resync_d=0 et_max_resync_q=0
+TRACE_ACT: trace_activated_d=1 trace_activated_q=1 enc_activated_d=0 enc_activated_q=0 enc_deactivated_d=0 enc_deactivated_q=0 enc_config_change_d=0 enc_config_change_q=0
+MISC: privchange_d=1 privchange_q=0 turn_on_tracer_d=1 turn_on_tracer_q=0
+ENC_CONFIG: enc_config_d='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0} | enc_config_q='{delta_address_en:1'b0,full_address_en:1'b1,implicit_exception_en:1'b0,sijump_en:1'b0,implicit_return_en:1'b0,branch_prediction_en:1'b0,jump_target_cache_en:1'b0}
+PRI[0]: packet_format=0 f_sync_sf=0 f_opt_sf=x thaddr=0 lc_tc_mux=0 qual_status=0 packet_valid=0 packet_emitted=0 tc_resync=0 nc_exc_only=0 nc_ppccd_br=0 keep_bits=1
+ADDR_COMP[0]: addr_to_compress=00000000
+TC/NC[0]: tc_iretired=00000000 nc_iretired=00000002 tc_itype=0 nc_itype=0 tc_address=00000000 nc_address=00001200 tc_updiscon=0 nc_updiscon=0 tc_qualified=0 nc_qualified=1
+LC/TC/NC (scalar): lc_exception=0 tc_exception=0 nc_exception=0 | lc_interrupt=0 tc_interrupt=0 nc_interrupt=0
+CAUSE/EPC/TVAL/TVEC/TIME: lc_cause=00000000 tc_cause=00000000 nc_cause=00000000 | lc_epc=00000000 tc_epc=00000000 nc_epc=00000000 | lc_tval=00000000 tc_tval=00000000 nc_tval=00000000 | tc_tvec=00000000 nc_tvec=00000000 | tc_time=0000000000000000 nc_time=0000000000000001 | tc_priv=0 nc_priv=3
+Q

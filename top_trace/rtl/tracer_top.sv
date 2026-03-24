@@ -10,12 +10,12 @@
 
 module tracer_top #(
   // Connector parameters
-  parameter int unsigned NRET            = 2,   // CVA6 retire width
-  parameter int unsigned N               = 1,   // MUST be 1 for this wrapper (encapsulator is single-lane)
+  parameter int unsigned NRET            = 1,   // CVA6 retire width
+  parameter int unsigned N               = 2,   // MUST be 1 for this wrapper (encapsulator is single-lane)
   parameter int unsigned FIFO_DEPTH      = 16,  // connector internal fifos
 
   // rv_tracer parameters
-  parameter int unsigned ONLY_BRANCHES   = 0,
+  parameter int unsigned ONLY_BRANCHES   = 1,
   parameter int unsigned APB_ADDR_WIDTH  = 32,
 
   // Encapsulator parameters
@@ -163,6 +163,7 @@ module tracer_top #(
     .time_i               ( time_i        ),
     .tvec_i               ( tvec_i        ),
     .epc_i                ( epc_i         ),
+    //.encapsulator_ready_i ( 1'b1   ),
 
     .encapsulator_ready_i ( encap_ready   ),
 
@@ -201,7 +202,7 @@ module tracer_top #(
 
     .valid_i            ( pkt_valid[0] ),
     .packet_length_i    ( pkt_length[0] ),
-    .notime_i           ( 1'b0 ),
+    .notime_i           ( 1'b1 ),
     .timestamp_i        ( encap_pkg::T_LEN'(time_i) ),
     .trace_payload_i    ( pkt_payload[0] ),
 
@@ -225,4 +226,7 @@ module tracer_top #(
     end
   end
 
+initial begin
+//$monitor("tracer_top: te_valid_o:%h",te_valid);
+end
 endmodule
